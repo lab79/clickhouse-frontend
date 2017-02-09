@@ -149,6 +149,11 @@ window.global_keywords_tables = "";
             if ($scope.vars.limitRows) {
                 extendSettings += 'max_result_rows=' + $scope.vars.limitRows + '&result_overflow_mode=throw';
             }
+            
+            // если указан maxBlockSize
+            if ($scope.vars.maxBlockSize) {
+                extendSettings += '&max_block_size=' + $scope.vars.maxBlockSize;
+            }            
 
             API.query(query.sql, query.format, true, extendSettings).then((data) => {
 
