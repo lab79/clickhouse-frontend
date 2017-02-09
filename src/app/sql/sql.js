@@ -64,6 +64,7 @@ window.global_keywords_tables = "";
             ],
             db: null,
             limitRows: localStorageService.get('editorLimitRows') || 500,
+            maxBlockSize: localStorageService.get('editorMaxBlockSize') || 32768,            
             fontSize: localStorageService.get('editorFontSize') || 16,
             theme: localStorageService.get('editorTheme') || 'cobalt'
         };
